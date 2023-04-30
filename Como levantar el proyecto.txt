@@ -6,8 +6,7 @@ El proyecto fue realizado en el lenguaje de programación PHP con XAMPP y Codeig
 1 - Para levantar el proyecto se debe copiar la carpeta DesafioBeClever y pegarla en la carpeta htdocs de la carpeta xampp (C:\xampp).
 
 2 - En caso de ocurrir el error "The framework needs the following extension(s) installed and loaded: intl":
-  2.1 - Se debe agregar: "extension=php_intl.dll" al final del archivo php.ini.
-  2.2 - Detener y volver a iniciar Apache.
+  2.1 - Se debe reemplazar el archivo php.ini ubicado en el directorio C:\xampp\php por el que se encuentra en el repositorio.
 
 3 - Para levantar la base de datos se debe crear una llamada desafiobeclever e importarle el archivo desafiobeclever - Base de datos.sql que se encuentra en el repositorio.
 
