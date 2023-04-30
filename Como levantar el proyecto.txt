@@ -1,7 +1,7 @@
 Proyecto: Desafío Técnico - BeClever
 Bustos Leandro Ezequiel
 
-El proyecto fue realizado en el lenguaje de programación PHP con XAMPP
+El proyecto fue realizado en el lenguaje de programación PHP con XAMPP y Codeigniter (Este último no necesita instalación).
 
 1 - Para levantar el proyecto se debe copiar la carpeta DesafioBeClever y pegarla en la carpeta htdocs de la carpeta xampp (C:\xampp).
 
