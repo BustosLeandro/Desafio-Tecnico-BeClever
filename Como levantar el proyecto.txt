@@ -1,0 +1,31 @@
+Proyecto: Desafío Técnico - BeClever
+Bustos Leandro Ezequiel
+
+El proyecto fue realizado en el lenguaje de programación PHP con XAMPP
+
+1 - Para levantar el proyecto se debe copiar la carpeta DesafioBeClever y pegarla en la carpeta htdocs de la carpeta xampp (C:\xampp).
+
+2 - En caso de ocurrir el error "The framework needs the following extension(s) installed and loaded: intl":
+  2.1 - Se debe agregar: "extension=php_intl.dll" al final del archivo php.ini.
+  2.2 - Detener y volver a iniciar Apache.
+
+3 - Para levantar la base de datos se debe crear una llamada desafiobeclever e importarle el archivo desafiobeclever - Base de datos.sql que se encuentra en el repositorio.
+
+4 - Las rutas utilizadas para acceder a los servicios son:
+
+* Services 1
+  http://localhost/DesafioBeClever/register/
+
+* Services 2
+  http://localhost/DesafioBeClever/search/dateFrom/dateTo/descriptionFilter/businessLocation
+
+* Services 3
+  http://localhost/DesafioBeClever/average/dateFrom/dateTo
+
+ACLARACIONES:
+
+- El servicio registro es una función post (yo use postman para pasarle los parámetros), los nombres de los parámetros son idEmployee, date, registerType, businessLocation.
+
+- El formato de los parámetros dateFrom y dateTo de los servicios 2 y 3 debe ser dd-mm-yyyy o yyyy-mm-dd ya que el carácter / separa los parámetros.
+
+- Al ser funciones GET los servicios 2 y 3 no tienen controles por falta de parámetros, si no se les agrega uno cambia la ruta y da error de enrutamiento.
