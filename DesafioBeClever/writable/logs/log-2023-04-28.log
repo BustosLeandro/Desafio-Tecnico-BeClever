@@ -1,0 +1,480 @@
+CRITICAL - 2023-04-28 15:40:35 --> Too few arguments to function App\Controllers\restEmpleado::average(), 0 passed in C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php on line 934 and exactly 2 expected
+in APPPATH\Controllers\restEmpleado.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-28 15:43:33 --> mysqli_sql_exception: Table 'ingresos.fecha' doesn't exist in C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\DesafioBeClever\app\Controllers\restEmpleado.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(934): App\Controllers\restEmpleado->average()
+#6 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+#7 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\DesafioBeClever\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-28 15:43:33 --> Table 'ingresos.fecha' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `empleados`
+JOIN `ingresos`.`Fecha` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `empleados`
+JOIN `ingresos`.`Fecha` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `empleados`
+JOIN `ingresos`.`Fecha` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleados`
+JOIN `ingresos`.`Fecha` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`', [], false)
+ 5 APPPATH\Controllers\restEmpleado.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-28 15:43:41 --> mysqli_sql_exception: Unknown column 'ingresos.CodigoEmpleado' in 'on clause' in C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\DesafioBeClever\app\Controllers\restEmpleado.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(934): App\Controllers\restEmpleado->average()
+#6 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+#7 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\DesafioBeClever\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-28 15:43:41 --> Unknown column 'ingresos.CodigoEmpleado' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `empleados`
+JOIN `ingresos` `Fecha` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `empleados`
+JOIN `ingresos` `Fecha` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `empleados`
+JOIN `ingresos` `Fecha` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleados`
+JOIN `ingresos` `Fecha` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`', [], false)
+ 5 APPPATH\Controllers\restEmpleado.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 15:47:27 --> Too few arguments to function App\Controllers\restEmpleado::average(), 0 passed in C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php on line 934 and exactly 2 expected
+in APPPATH\Controllers\restEmpleado.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 15:51:42 --> Too few arguments to function App\Controllers\restEmpleado::average(), 0 passed in C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php on line 934 and exactly 2 expected
+in APPPATH\Controllers\restEmpleado.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 16:15:32 --> Too few arguments to function App\Controllers\restEmpleado::average(), 0 passed in C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\restEmpleado.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 16:27:13 --> syntax error, unexpected token "as", expecting ";"
+in APPPATH\Controllers\restEmpleado.php on line 34.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\restEmpleado')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\restEmpleado')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\restEmpleado', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 16:27:44 --> Undefined array key "sexo"
+in APPPATH\Controllers\restEmpleado.php on line 35.
+ 1 APPPATH\Controllers\restEmpleado.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sexo"', 'C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('$dateFrom', '$dateTo')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 16:31:15 --> syntax error, unexpected token "=>"
+in APPPATH\Controllers\restEmpleado.php on line 42.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\restEmpleado')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\restEmpleado')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\restEmpleado', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 16:38:52 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\restEmpleado.php on line 49.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\restEmpleado')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\restEmpleado')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\restEmpleado', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 16:42:36 --> date_diff(): Argument #1 ($baseObject) must be of type DateTimeInterface, string given
+in APPPATH\Controllers\restEmpleado.php on line 48.
+ 1 APPPATH\Controllers\restEmpleado.php(48): date_diff('2023/04/29', Object(DateTime))
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('2023-04-29', '2023-05-29')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 16:43:08 --> Undefined array key "Fecha"
+in APPPATH\Controllers\restEmpleado.php on line 47.
+ 1 APPPATH\Controllers\restEmpleado.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Fecha"', 'C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('2023-04-29', '2023-05-29')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 16:43:43 --> date_diff(): Argument #1 ($baseObject) must be of type DateTimeInterface, string given
+in APPPATH\Controllers\restEmpleado.php on line 48.
+ 1 APPPATH\Controllers\restEmpleado.php(48): date_diff('2023/04/29', Object(DateTime))
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('2023-04-29', '2023-05-29')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 16:44:30 --> Call to undefined function App\Controllers\date_time()
+in APPPATH\Controllers\restEmpleado.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('2023-04-29', '2023-05-29')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 16:44:47 --> date_diff(): Argument #1 ($baseObject) must be of type DateTimeInterface, string given
+in APPPATH\Controllers\restEmpleado.php on line 48.
+ 1 APPPATH\Controllers\restEmpleado.php(48): date_diff('2023/04/29', Object(DateTime))
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('2023-04-29', '2023-05-29')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 16:45:32 --> Object of class DateInterval could not be converted to string
+in APPPATH\Controllers\restEmpleado.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('2023-04-29', '2023-05-29')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 17:00:41 --> Object of class DateTime could not be converted to string
+in APPPATH\Controllers\restEmpleado.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('2021-12-2', '2023-05-29')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 17:01:33 --> Undefined property: DateTime::$date
+in APPPATH\Controllers\restEmpleado.php on line 47.
+ 1 APPPATH\Controllers\restEmpleado.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: DateTime::$date', 'C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('2021-12-2', '2023-05-29')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 17:07:21 --> Undefined variable $cont
+in APPPATH\Controllers\restEmpleado.php on line 55.
+ 1 APPPATH\Controllers\restEmpleado.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cont', 'C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php', 55)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('2023-05-28', '2023-05-29')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 17:16:25 --> Undefined variable $cont
+in APPPATH\Controllers\restEmpleado.php on line 45.
+ 1 APPPATH\Controllers\restEmpleado.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cont', 'C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('2023-04-27', '2023-04-28')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 17:26:45 --> Cannot use [] for reading
+in APPPATH\Controllers\restEmpleado.php on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-04-28 17:26:51 --> Cannot use [] for reading
+in APPPATH\Controllers\restEmpleado.php on line 62.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-04-28 17:34:25 --> mysqli_sql_exception: Table 'desafiobeclever.ingresos,' doesn't exist in C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `emplead...', 0)
+#1 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `emplead...')
+#2 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `emplead...')
+#3 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#4 C:\xampp\htdocs\DesafioBeClever\app\Controllers\restEmpleado.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(934): App\Controllers\restEmpleado->average('27-04-2023', '07-05-2023')
+#6 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+#7 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\DesafioBeClever\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-28 17:34:25 --> Table 'desafiobeclever.ingresos,' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos,` `sucursales` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo` AND `sucursales`.`Codigo` = `empleados`.`CodigoSucursal`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos,` `sucursales` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo` AND `sucursales`.`Codigo` = `empleados`.`CodigoSucursal`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos,` `sucursales` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo` AND `sucursales`.`Codigo` = `empleados`.`CodigoSucursal`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos,` `sucursales` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo` AND `sucursales`.`Codigo` = `empleados`.`CodigoSucursal`', [], false)
+ 5 APPPATH\Controllers\restEmpleado.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('27-04-2023', '07-05-2023')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 17:36:25 --> Too few arguments to function CodeIgniter\Database\BaseBuilder::join(), 1 passed in C:\xampp\htdocs\DesafioBeClever\app\Controllers\restEmpleado.php on line 25 and at least 2 expected
+in SYSTEMPATH\Database\BaseBuilder.php on line 617.
+ 1 APPPATH\Controllers\restEmpleado.php(25): CodeIgniter\Database\BaseBuilder->join('ingresos, sucursales')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('27-04-2023', '07-05-2023')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 17:36:32 --> Too few arguments to function CodeIgniter\Database\BaseBuilder::join(), 1 passed in C:\xampp\htdocs\DesafioBeClever\app\Controllers\restEmpleado.php on line 25 and at least 2 expected
+in SYSTEMPATH\Database\BaseBuilder.php on line 617.
+ 1 APPPATH\Controllers\restEmpleado.php(25): CodeIgniter\Database\BaseBuilder->join('ingresos, sucursales')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('27-04-2023', '07-05-2023')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-28 17:37:03 --> mysqli_sql_exception: Table 'desafiobeclever.ingresos,' doesn't exist in C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `emplead...', 0)
+#1 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `emplead...')
+#2 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `emplead...')
+#3 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#4 C:\xampp\htdocs\DesafioBeClever\app\Controllers\restEmpleado.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(934): App\Controllers\restEmpleado->average('27-04-2023', '07-05-2023')
+#6 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+#7 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\DesafioBeClever\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-28 17:37:03 --> Table 'desafiobeclever.ingresos,' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos,` `sucursales` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos,` `sucursales` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos,` `sucursales` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos,` `sucursales` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`', [], false)
+ 5 APPPATH\Controllers\restEmpleado.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('27-04-2023', '07-05-2023')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-28 17:37:11 --> mysqli_sql_exception: Unknown column 'sucursales.Sucursal' in 'field list' in C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `emplead...', 0)
+#1 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `emplead...')
+#2 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `emplead...')
+#3 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#4 C:\xampp\htdocs\DesafioBeClever\app\Controllers\restEmpleado.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(934): App\Controllers\restEmpleado->average('27-04-2023', '07-05-2023')
+#6 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+#7 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\DesafioBeClever\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-28 17:37:11 --> Unknown column 'sucursales.Sucursal' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`', [], false)
+ 5 APPPATH\Controllers\restEmpleado.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('27-04-2023', '07-05-2023')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-28 17:37:14 --> mysqli_sql_exception: Unknown column 'sucursales.Sucursal' in 'field list' in C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `emplead...', 0)
+#1 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `emplead...')
+#2 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `emplead...')
+#3 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#4 C:\xampp\htdocs\DesafioBeClever\app\Controllers\restEmpleado.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(934): App\Controllers\restEmpleado->average('27-04-2023', '07-05-2023')
+#6 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+#7 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\DesafioBeClever\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-28 17:37:14 --> Unknown column 'sucursales.Sucursal' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados`
+JOIN `ingresos` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`', [], false)
+ 5 APPPATH\Controllers\restEmpleado.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('27-04-2023', '07-05-2023')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-28 17:37:31 --> mysqli_sql_exception: Table 'desafiobeclever.ingresos,' doesn't exist in C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `emplead...', 0)
+#1 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `emplead...')
+#2 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `emplead...')
+#3 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#4 C:\xampp\htdocs\DesafioBeClever\app\Controllers\restEmpleado.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(934): App\Controllers\restEmpleado->average('27-04-2023', '07-05-2023')
+#6 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+#7 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\DesafioBeClever\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-28 17:37:31 --> Table 'desafiobeclever.ingresos,' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `empleados`.*, `ingresos`.`Fecha`
+FROM `empleados`
+JOIN `ingresos,` `sucursales` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `empleados`.*, `ingresos`.`Fecha`
+FROM `empleados`
+JOIN `ingresos,` `sucursales` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `empleados`.*, `ingresos`.`Fecha`
+FROM `empleados`
+JOIN `ingresos,` `sucursales` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*, `ingresos`.`Fecha`
+FROM `empleados`
+JOIN `ingresos,` `sucursales` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`', [], false)
+ 5 APPPATH\Controllers\restEmpleado.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('27-04-2023', '07-05-2023')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 17:38:36 --> Undefined array key "Sexo"
+in APPPATH\Controllers\restEmpleado.php on line 31.
+ 1 APPPATH\Controllers\restEmpleado.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Sexo"', 'C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('27-04-2023', '07-05-2023')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 17:44:11 --> Undefined variable $ingresosEmpleados
+in APPPATH\Controllers\restEmpleado.php on line 66.
+ 1 APPPATH\Controllers\restEmpleado.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ingresosEmpleados', 'C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php', 66)
+ 2 APPPATH\Controllers\restEmpleado.php(42): App\Controllers\restEmpleado->verificarIngresos('28-04-2023', '07-05-2023', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('28-04-2023', '07-05-2023')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-28 17:48:25 --> mysqli_sql_exception: Unknown column 'empleados.Codigo' in 'on clause' in C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\DesafioBeClever\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `e`.`Nom...', 0)
+#1 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`Nom...')
+#2 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`Nom...')
+#3 C:\xampp\htdocs\DesafioBeClever\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`Nom...', Array, false)
+#4 C:\xampp\htdocs\DesafioBeClever\app\Controllers\restEmpleado.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(934): App\Controllers\restEmpleado->average('28-04-2023', '07-05-2023')
+#6 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+#7 C:\xampp\htdocs\DesafioBeClever\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\DesafioBeClever\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-28 17:48:25 --> Unknown column 'empleados.Codigo' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `e`.`Nombre`, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados` `e`
+JOIN `ingresos` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`
+JOIN `sucursales` ON `empleados`.`CodigoSucursal` = `sucursales`.`Codigo`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`Nombre`, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados` `e`
+JOIN `ingresos` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`
+JOIN `sucursales` ON `empleados`.`CodigoSucursal` = `sucursales`.`Codigo`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`Nombre`, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados` `e`
+JOIN `ingresos` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`
+JOIN `sucursales` ON `empleados`.`CodigoSucursal` = `sucursales`.`Codigo`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`Nombre`, `ingresos`.`Fecha`, `sucursales`.`Sucursal`
+FROM `empleados` `e`
+JOIN `ingresos` ON `ingresos`.`CodigoEmpleado` = `empleados`.`Codigo`
+JOIN `sucursales` ON `empleados`.`CodigoSucursal` = `sucursales`.`Codigo`', [], false)
+ 5 APPPATH\Controllers\restEmpleado.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('28-04-2023', '07-05-2023')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 17:48:36 --> Undefined array key "Sexo"
+in APPPATH\Controllers\restEmpleado.php on line 31.
+ 1 APPPATH\Controllers\restEmpleado.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Sexo"', 'C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('28-04-2023', '07-05-2023')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 17:55:44 --> Undefined variable $fechaIngreso
+in APPPATH\Controllers\restEmpleado.php on line 41.
+ 1 APPPATH\Controllers\restEmpleado.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fechaIngreso', 'C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('28-04-2023', '07-05-2023')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 17:55:52 --> Undefined variable $fechaDesde
+in APPPATH\Controllers\restEmpleado.php on line 67.
+ 1 APPPATH\Controllers\restEmpleado.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fechaDesde', 'C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php', 67)
+ 2 APPPATH\Controllers\restEmpleado.php(47): App\Controllers\restEmpleado->verificarIngresos('28-04-2023', '07-05-2023', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('28-04-2023', '07-05-2023')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 17:58:34 --> Array to string conversion
+in APPPATH\Controllers\restEmpleado.php on line 52.
+ 1 APPPATH\Controllers\restEmpleado.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('1-04-2023', '17-04-2023')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 18:18:01 --> Undefined variable $ingresosEmpleados
+in APPPATH\Controllers\restEmpleado.php on line 60.
+ 1 APPPATH\Controllers\restEmpleado.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ingresosEmpleados', 'C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('1-04-2021', '17-04-2024')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 18:20:18 --> Division by zero
+in APPPATH\Controllers\restEmpleado.php on line 94.
+ 1 APPPATH\Controllers\restEmpleado.php(60): App\Controllers\restEmpleado->promedioPorSede([...], 'Argentina', 0)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('28-04-2023', '28-04-2023')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 18:20:36 --> Division by zero
+in APPPATH\Controllers\restEmpleado.php on line 94.
+ 1 APPPATH\Controllers\restEmpleado.php(60): App\Controllers\restEmpleado->promedioPorSede([...], 'Argentina', 0)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\restEmpleado->average('28-04-2023', '28-04-2023')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\restEmpleado))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 18:24:11 --> syntax error, unexpected token "foreach"
+in APPPATH\Controllers\restEmpleado.php on line 60.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\restEmpleado')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\restEmpleado')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\restEmpleado', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 18:25:58 --> syntax error, unexpected token "return"
+in APPPATH\Controllers\restEmpleado.php on line 70.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\DesafioBeClever\\app\\Controllers\\restEmpleado.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\restEmpleado')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\restEmpleado')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\restEmpleado', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
